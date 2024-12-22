@@ -1,0 +1,43 @@
+{
+  "name": "newsmern",
+  "version": "1.0.0",
+  "description": "The backend API for the NewsMern app, a full-stack application that fetches news articles from NewsAPI.org and serves them to the front-end.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajeshKumarBaral23/newsmern.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajeshKumarBaral23/newsmern/issues"
+  },
+  "homepage": "https://github.com/RajeshKumarBaral23/newsmern#readme",
+  "keywords": ["NewsAPI", "news", "API", "React", "backend"],
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "celebrate": "^13.0.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "express-winston": "^4.0.5",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.13.5",
+    "newsapi": "^1.0.0",
+    "validator": "^13.5.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7"
+  }
+}

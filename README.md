@@ -1,16 +1,4 @@
 # NEWS-mern-full-stack
-Express Server Setup: Configured the Express server with middleware like helmet, cors, and custom error handling for secure and structured request handling.
+Week 1 Updates:
 
-MongoDB Integration: Connected the backend to MongoDB using Mongoose, ensuring the database was set up and ready for use.
-
-Sample API Implementation: Created a sample /api/news route that returns mock news data as a proof of concept for the application.
-
-Static File Hosting: Configured static file serving using express.static for potential frontend integration.
-
-Request Logging: Integrated a logging system to monitor requests and errors, aiding in debugging and performance tracking.
-
-CORS Management: Defined allowed origins for CORS, ensuring secure cross-origin resource sharing for the React frontend.
-
-Error Handling: Added structured error handling middleware for 404 and other server errors, improving API robustness.
-
-Rate Limiting: Implemented rate limiting with a limiter to protect the server from potential abuse or overuse.
+This week, the backend for the project was set up using Express and MongoDB. A sample /api/news route was created to return mock news data. Basic security was implemented with Helmet and CORS, and request logging was configured for easier debugging. Static file hosting was also set up for future frontend integration. MongoDB was connected for data storage, and error handling was put in place to manage 404 and other server errors. Rate limiting was considered but will be reintroduced in future updates. Expect more features and data integration in the coming weeks.

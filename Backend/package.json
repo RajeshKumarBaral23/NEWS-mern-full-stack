@@ -9,15 +9,11 @@
     "dev": "nodemon app.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lindakovacs/news-explorer-api.git"
+    "type": "git"
   },
-  "author": "Linda Kovacs",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lindakovacs/news-explorer-api/issues"
-  },
-  "homepage": "https://github.com/lindakovacs/news-explorer-api#readme",
+  "bugs": {},
+  "homepage": "",
   "keywords": [],
   "dependencies": {
     "bcrypt": "^5.0.0",

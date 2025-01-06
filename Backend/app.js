@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const path = require('path');
 const helmet = require('helmet');
-const cors = require('cors');
+const cors = require('cors');  // Import CORS
 const NewsAPI = require('newsapi');
 const routes = require('./routes/index.js');  // Correct path
 
@@ -16,22 +16,28 @@ const {
 } = require('./utils/constants');
 
 // Load environment variables
-require('dotenv').config(); // Ensure dotenv is loaded
+require('dotenv').config();
 
 // Get the server port from the environment (default to 3000)
-const { PORT = 3000 } = process.env; // Now using PORT=3000 as default
+const { PORT = 3000 } = process.env;
 
 const app = express();
 
-// Route for the root path - added this
+// CORS setup - Allow requests only from your frontend
+app.use(cors({
+  origin: 'http://localhost:3001',  // Update with the URL of your React app
+  credentials: true,  // Allow cookies, authentication headers with CORS requests
+}));
+
+// Route for the root path
 app.get('/', (req, res) => {
   res.send('Welcome to the News Explorer API');
 });
 
 // Initialize NewsAPI with the key from environment variable
-const newsapi = new NewsAPI(process.env.NEWS_API_KEY); // This should work now
+const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
 
-// MongoDB connection using the updated SERVER_DB_ADDRESS from .env
+// MongoDB connection
 mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.SERVER_DB_ADDRESS, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -44,7 +50,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(requestLogger);
 app.use(limiter);
-app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
@@ -60,7 +65,7 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorsHandling);
 
-// Start the server and listen on the correct port
+// Start the server
 app.listen(PORT, () => {
   console.log(`App listening at port ${PORT}`);
 });

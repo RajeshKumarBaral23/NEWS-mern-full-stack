@@ -1,5 +1,7 @@
+// filepath: /C:/Users/lemrk/Music/NEWS-mern-full-stack/src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

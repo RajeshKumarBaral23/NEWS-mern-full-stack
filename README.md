@@ -1,6 +1,7 @@
 In Week 1, I set up the backend using Express.js and connected it to MongoDB to store news data. I created API endpoints for CRUD operations and tested them using Postman.
 
 In Week 2, I started building the frontend with React, designing components like a homepage, navigation bar, and news detail view, and integrated them with the backend using Axios. I also organized the project structure with clear folders for scalability and resolved issues to ensure smooth communication between the frontend and backend.
+In Week 3, I developed a fully functional authentication system for the application, enabling users to register, log in, and access personalized content. This setup also laid the groundwork for future features, such as user-specific dashboards and preferences.
 
 
 # Getting Started with Create React App
